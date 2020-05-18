@@ -7,6 +7,7 @@ brew cask install google-chrome
 brew cask install iterm2
 
 brew cask install visual-studio-code
+curl -fsSL https://raw.githubusercontent.com/monzoor/mac-all-install/master/extensions.list | xargs -L 1 code --install-extension
 
 brew cask install slack 
 
