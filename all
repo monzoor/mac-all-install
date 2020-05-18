@@ -1,0 +1,43 @@
+#!/bin/bash
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+brew cask install google-chrome
+
+brew cask install iterm2
+
+brew cask install visual-studio-code
+
+brew cask install slack 
+
+brew install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+brew install bash-completion
+brew cask install docker
+brew install kubectl
+
+brew cask install 1password
+
+brew cask install spectacle
+
+brew install node
+
+brew install yarn
+
+echo 'Enter git user name'
+read user
+
+git config --global user.name '$user'
+
+echo 'Enter git user email'
+read email
+
+git config --global user.email '$email'
+
+ssh-keygen -t rsa -b 4096 -C '$email'
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+
+brew cleanup
