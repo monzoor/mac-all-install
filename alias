@@ -1,0 +1,20 @@
+alias gt="git status"
+alias gd="git add ."
+alias gc="git checkout"
+alias gb="git branch"
+alias gbr="git branch -r"
+alias gf="git fetch"
+alias gpm="git pull origin master"
+alias gpsm="git push origin master"
+
+alias show="defaults write com.apple.finder AppleShowAllFiles YES"
+alias hide="defaults write com.apple.finder AppleShowAllFiles NO"
+
+function mdo() { mkdir "$@" && cd "$@"; }
+
+alias yclean="rm -rf node_modules && rm -rf yarn.lock && yarn cache clean"
+
+alias pys="python -m SimpleHTTPServer 3030"
+alias phps="php -S 127.0.0.1:3333"
+
+alias dtest="curl -o iPhone5C-704.ipsw http://appldnld.apple.com/iOS7/031-1828.20131114.P3wE4/iPhone5,3_7.0.4_11B554a_Restore.ipsw"
